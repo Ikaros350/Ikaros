@@ -1,0 +1,23 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine(" Ingresar c, z:");
+		
+		double c = 56.31*(Math.PI/180); //tranformar a radianes 
+		double z = 3;
+		
+		double t = z/Math.Sin(c);
+		double y = t*Math.Cos(c);
+		double b = Math.Asin((t*Math.Sin(c))/z)*(180/Math.PI); // ley de seno y tranformacion a grados
+		double a = Math.Asin((y*Math.Sin(b*(Math.PI/180)))/t)*(180/Math.PI); // ley de seno y tranformacion a grados
+		
+		Console.WriteLine("t="+t);
+		Console.WriteLine("y="+y);
+		Console.WriteLine("b="+b);
+		Console.WriteLine("a="+a);
+					 	
+	}
+}
